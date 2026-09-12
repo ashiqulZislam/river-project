@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+:root {
+  --green: #087f5b;
+  --dark: #10231d;
+  --light: #f4faf7;
+  --muted: #60736b;
+  --card: #ffffff;
+  --border: #dcebe4;
+}
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: #fbfefd;
+  line-height: 1.6;
+}
+.container { width: min(1120px, 92%); margin: auto; }
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav { height: 68px; display: flex; align-items: center; justify-content: space-between; }
+.logo { color: var(--dark); text-decoration: none; font-weight: 800; font-size: 1.05rem; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.nav-links a:hover { color: var(--green); }
+
+.hero {
+  padding: 82px 0;
+  background: linear-gradient(135deg, #effaf5, #fff);
+}
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 55px; align-items: center; }
+.eyebrow { color: var(--green); font-size: .78rem; font-weight: 800; letter-spacing: .13em; }
+h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); line-height: 1.02; margin: 14px 0 20px; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 8px 0 24px; }
+.hero-text { color: var(--muted); font-size: 1.15rem; max-width: 620px; }
+.buttons { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.btn { padding: 12px 18px; border-radius: 10px; text-decoration: none; font-weight: 800; }
+.primary { background: var(--green); color: white; }
+.secondary { border: 1px solid #bcd5cb; color: var(--dark); background: white; }
+
+.river-art {
+  min-height: 390px; border-radius: 28px; overflow: hidden; position: relative;
+  background: linear-gradient(#bde6f4 0 42%, #cfe8b8 42% 58%, #65b9d0 58%);
+  box-shadow: 0 25px 70px rgba(16, 55, 43, .15);
+}
+.sun { position:absolute; width:80px; height:80px; border-radius:50%; background:#ffd66b; top:45px; right:60px; }
+.hill { position:absolute; background:#75a86d; width:70%; height:170px; border-radius:50% 50% 0 0; bottom:125px; }
+.h1 { left:-15%; } .h2 { right:-20%; background:#62935f; }
+.water { position:absolute; left:0; right:0; bottom:0; height:170px; background:linear-gradient(155deg,#48a7c4,#167c9c); clip-path: polygon(0 35%,35% 10%,70% 55%,100% 25%,100% 100%,0 100%); }
+.boat { position:absolute; font-size:45px; left:48%; top:51%; }
+.tree { position:absolute; font-size:55px; bottom:105px; }
+.t1 { left:12%; } .t2 { right:8%; }
+
+.section { padding: 85px 0; }
+.section-heading { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:30px; }
+.search { width:260px; max-width:100%; padding:13px 15px; border:1px solid var(--border); border-radius:10px; font-size:1rem; }
+.river-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+.river-card {
+  background:var(--card); border:1px solid var(--border); border-radius:18px;
+  padding:24px; box-shadow:0 8px 30px rgba(20,60,45,.05);
+}
+.river-card h3 { margin:8px 0; font-size:1.35rem; }
+.status { display:inline-block; padding:5px 9px; border-radius:99px; background:#fff1c9; font-size:.75rem; font-weight:800; }
+.river-card p { color:var(--muted); }
+.note { color:var(--muted); font-size:.9rem; margin-top:22px; }
+.mission { background:#eef8f3; }
+.mission-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.mission-grid article { background:white; border-radius:18px; padding:26px; border:1px solid var(--border); }
+.mission-grid span { font-size:2rem; }
+.mission-grid h3 { margin-bottom:5px; }
+.mission-grid p, .source-text { color:var(--muted); }
+.source-text { max-width:780px; font-size:1.08rem; }
+.source-box { margin-top:25px; max-width:780px; padding:20px; border-left:4px solid var(--green); background:#f1f8f5; }
+.source-box p { margin-bottom:0; color:var(--muted); }
+footer { background:var(--dark); color:white; padding:28px 0; }
+.footer-content { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+footer span { color:#b8cbc3; }
+
+@media (max-width: 800px) {
+  .hero-grid, .river-grid, .mission-grid { grid-template-columns:1fr; }
+  .hero { padding:55px 0; }
+  .section-heading { align-items:stretch; flex-direction:column; }
+  .nav-links { gap:12px; }
+  .river-art { min-height:300px; }
+}
