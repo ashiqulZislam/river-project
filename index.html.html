@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangladesh River Watch</title>
+  <meta name="description" content="A public-awareness project documenting the condition, history, and restoration of rivers in Bangladesh.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#home">🇧🇩 River Watch</a>
+      <div class="nav-links">
+        <a href="#rivers">Rivers</a>
+        <a href="#mission">Mission</a>
+        <a href="#sources">Sources</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">PUBLIC AWARENESS PROJECT</span>
+          <h1>Protect Bangladesh's rivers before they disappear.</h1>
+          <p class="hero-text">
+            A community-focused website to document river health, history,
+            human impact, and restoration efforts across Bangladesh.
+          </p>
+          <div class="buttons">
+            <a class="btn primary" href="#rivers">Explore rivers</a>
+            <a class="btn secondary" href="#mission">Our mission</a>
+          </div>
+        </div>
+        <div class="river-art" aria-label="Illustration of a river">
+          <div class="sun"></div>
+          <div class="hill h1"></div>
+          <div class="hill h2"></div>
+          <div class="water"></div>
+          <div class="boat">⛵</div>
+          <div class="tree t1">🌳</div>
+          <div class="tree t2">🌳</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rivers" class="section container">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">RIVER DATABASE</span>
+          <h2>Rivers that need attention</h2>
+        </div>
+        <input id="search" class="search" type="search" placeholder="Search a river...">
+      </div>
+
+      <div id="riverGrid" class="river-grid"></div>
+      <p class="note">Data shown here is a starter structure. Add verified information and cite the original government, scientific, or community source for every important claim.</p>
+    </section>
+
+    <section id="mission" class="section mission">
+      <div class="container">
+        <span class="eyebrow">WHY THIS PROJECT?</span>
+        <h2>From information to awareness.</h2>
+        <div class="mission-grid">
+          <article><span>📚</span><h3>Document</h3><p>Record historical and present-day information about rivers in an easy-to-understand format.</p></article>
+          <article><span>🗺️</span><h3>Visualize</h3><p>Show river locations, changes, photographs, maps, and restoration progress.</p></article>
+          <article><span>🌱</span><h3>Inspire action</h3><p>Help people understand why healthy rivers matter to communities, nature, farming, transport, and flood management.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources" class="section container">
+      <span class="eyebrow">TRANSPARENCY</span>
+      <h2>Sources matter.</h2>
+      <p class="source-text">
+        This project should distinguish verified facts from community memories or observations.
+        Government agencies, research papers, historical maps, satellite imagery, and properly
+        attributed photographs can be listed here as the project grows.
+      </p>
+      <div class="source-box">
+        <strong>Source policy</strong>
+        <p>Every river profile should include a “Sources” section. Do not present an estimate or unverified claim as an official fact.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <strong>🇧🇩 Bangladesh River Watch</strong>
+      <span>Built for public awareness • No ads • No commercial purpose</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
