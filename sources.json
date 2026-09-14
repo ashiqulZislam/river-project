@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Government river report",
+    "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dbhwd/2024/12/e9a8457ccc494cc4b5953a8d8a6fd319.pdf",
+    "priority": "primary"
+  },
+  {
+    "name": "BWDB rivers information",
+    "url": "https://www.bwdb.gov.bd/rivers-information",
+    "priority": "primary"
+  },
+  {
+    "name": "BWDB surface water quality",
+    "url": "https://www.hydrology.bwdb.gov.bd/includes/surface_water_quality_print.php?dist=&river=",
+    "priority": "primary"
+  },
+  {
+    "name": "NRCC Sutang/Shoiljura notice",
+    "url": "https://nrcc.gov.bd/site/notices/a8583f83-9f0a-41ff-b689-c9933de68427/",
+    "priority": "primary"
+  },
+  {
+    "name": "Official e-GP tender 1203365",
+    "url": "https://www.eprocure.gov.bd/resources/common/ViewTender.jsp?TenderCancel=false&id=1203365",
+    "priority": "primary"
+  },
+  {
+    "name": "Habiganj Agricultural University",
+    "url": "https://hau.ac.bd/news/60",
+    "priority": "institutional"
+  },
+  {
+    "name": "Academic study record",
+    "url": "https://www.researchgate.net/publication/357213407_An_Assessment_of_the_Impact_of_Industrialization_on_Physical_Environment_and_Socio-economic_Conditions_around_the_Alipur_Industrial_Area_Bangladesh",
+    "priority": "academic"
+  }
+]

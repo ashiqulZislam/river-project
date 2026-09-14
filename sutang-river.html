@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sutang River research project — history, geography, present condition, pollution, government action and restoration.">
+  <title>Sutang River — From Past to Future</title>
+  <style>
+    :root{--bg:#f4f8f7;--card:#fff;--ink:#12201d;--muted:#5d6d68;--line:#dbe7e3;--river:#087f8c;--deep:#07545e;--accent:#d9a441;--danger:#a93c3c;--good:#2f7d55;--shadow:0 12px 35px rgba(10,50,45,.08)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+    a{color:var(--deep);font-weight:650} .wrap{max-width:1120px;margin:auto;padding:0 20px}
+    header{background:linear-gradient(135deg,#063f48,#087f8c 58%,#3aa5a0);color:#fff;padding:76px 0 62px;position:relative;overflow:hidden}
+    header:after{content:"";position:absolute;inset:auto -10% -80px -10%;height:170px;background:rgba(255,255,255,.09);border-radius:50%}
+    .eyebrow{letter-spacing:.13em;text-transform:uppercase;font-size:.78rem;font-weight:800;opacity:.82}
+    h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.02;margin:10px 0 16px}
+    .hero p{max-width:760px;font-size:1.08rem;opacity:.94}.hero-nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+    .hero-nav a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.35);padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.08)}
+    section{padding:54px 0}.section-title{font-size:2rem;margin:0 0 8px}.lead{color:var(--muted);max-width:780px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:24px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+    .stat{font-size:2rem;font-weight:850;color:var(--river);display:block}.label{font-size:.9rem;color:var(--muted)}
+    .badge{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:4px 9px;margin-bottom:8px;background:#e8f4f0;color:var(--good)}
+    .badge.warn{background:#fff2df;color:#8a5b10}.badge.red{background:#fde9e7;color:var(--danger)}
+    .timeline{border-left:3px solid #a7d7d1;margin:28px 0 0 12px;padding-left:25px}
+    .event{position:relative;margin:0 0 28px}.event:before{content:"";position:absolute;left:-34px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--river);border:3px solid var(--bg)}
+    .event h3{margin:0 0 4px}.event p{margin:0;color:var(--muted)}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compare .card{height:100%}
+    .source-list{display:grid;gap:12px;margin-top:22px}.source{background:#fff;border:1px solid var(--line);padding:16px;border-radius:14px}
+    .source small{display:block;color:var(--muted);margin-top:4px}
+    .notice{border-left:5px solid var(--accent);background:#fffaf0;padding:18px 20px;border-radius:12px;margin-top:22px}
+    .problem{border-top:4px solid var(--danger)} .solution{border-top:4px solid var(--good)}
+    footer{background:#092f34;color:#d8ebe8;padding:35px 0}.footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
+    @media(max-width:700px){.compare,.footer-grid{grid-template-columns:1fr}section{padding:40px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <div class="eyebrow">River Research Project • Habiganj, Bangladesh</div>
+    <h1>Sutang River</h1>
+    <p><strong>From Past to Future</strong> — a source-based digital record of the river's geography, history, present condition, pollution, government action and possible restoration.</p>
+    <div class="hero-nav">
+      <a href="#profile">River profile</a><a href="#history">History</a><a href="#present">Present</a>
+      <a href="#action">Government action</a><a href="#solutions">Solutions</a><a href="#sources">Sources</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="profile">
+    <div class="eyebrow">01 • River information</div>
+    <h2 class="section-title">A verified river profile</h2>
+    <p class="lead">The strongest baseline used here is the Bangladesh Government's <em>Classification of Wetlands of Bangladesh — Annexure 1: Rivers of Bangladesh</em>. It identifies Sutang as BWDB Id NE-82.</p>
+    <div class="grid">
+      <div class="card"><span class="stat">82 km</span><span class="label">Length in the 2016 government river dataset</span></div>
+      <div class="card"><span class="stat">21–62 m</span><span class="label">Reported width range; average 36 m</span></div>
+      <div class="card"><span class="stat">Seasonal</span><span class="label">Non-tidal; lower-flow period January–April</span></div>
+      <div class="card"><span class="stat">NE-82</span><span class="label">BWDB river identification in the government dataset</span></div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <span class="badge">Government record</span>
+        <h3>Origin & course</h3>
+        <p>The government dataset records the offtake/source area as <strong>India</strong>. It describes the river's travel through <strong>Chunarughat, Habiganj Sadar and Lakhai</strong> upazilas of Habiganj District.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Government record</span>
+        <h3>Outfall & form</h3>
+        <p>The same dataset records the outfall as the <strong>Meghna (Upper) River</strong>, describes Sutang as <strong>meandering</strong>, and gives a flood-flow slope of about <strong>1 cm/km</strong>.</p>
+      </div>
+      <div class="card">
+        <span class="badge warn">Needs historical verification</span>
+        <h3>Old route & maps</h3>
+        <p>Historical maps and older channel positions should be added only after the original map/archive source is verified. This page deliberately does not present an unverified “old route” as fact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="history">
+    <div class="eyebrow">02 • Then</div>
+    <h2 class="section-title">History & people</h2>
+    <p class="lead">The project will preserve the river as a historical record, not only as a pollution story.</p>
+    <div class="timeline">
+      <div class="event">
+        <h3>Earlier role</h3>
+        <p>Recent reporting describes Sutang as an important communication route in the haor region when it carried water throughout the year. This is retained as a reported historical account, not as a government measurement.</p>
+      </div>
+      <div class="event">
+        <h3>Industrialisation & pollution</h3>
+        <p>Research and reporting document the connection between industrial effluent channels around the Alipur industrial area and the Sutang system, including the Shoiljura canal.</p>
+      </div>
+      <div class="event">
+        <h3>Legal / institutional response</h3>
+        <p>In 2024, the National River Conservation Commission published a notice concerning a committee formed under High Court directions to monitor ETP operation and pollution-control measures for Sutang and the connected Shoiljura canal.</p>
+      </div>
+      <div class="event">
+        <h3>2026 restoration work</h3>
+        <p>Bangladesh's e-GP system records a BWDB tender under the project “Revitalization and Pollution-free of Sutang River in Habiganj District” for dredging/re-excavation of a 6.5 km section in Lakhai.</p>
+      </div>
+    </div>
+    <div class="notice"><strong>Archive rule:</strong> old photographs, newspaper scans and historical maps will be added only with a traceable archive/source credit. Copyrighted material should be linked or displayed with appropriate permission rather than copied into the project.</div>
+  </section>
+
+  <section id="present">
+    <div class="eyebrow">03 • Now</div>
+    <h2 class="section-title">Present condition</h2>
+    <p class="lead">The current picture combines government monitoring infrastructure, academic research and documented local impacts. Where the evidence is not yet complete, the project says so.</p>
+    <div class="compare">
+      <div class="card problem">
+        <span class="badge red">Documented problem</span>
+        <h3>Industrial & water pollution</h3>
+        <p>Academic work links industrial effluent from the Alipur industrial area to the Sutang through the Shoiljura effluent-carrying canal. The National River Conservation Commission has also documented institutional action specifically addressing pollution of Sutang and Shoiljura.</p>
+      </div>
+      <div class="card problem">
+        <span class="badge red">Recent research</span>
+        <h3>Microplastics</h3>
+        <p>Habiganj Agricultural University reported research detecting <strong>6.67–46.6 microplastic particles per litre</strong> in Sutang water. The same report says 51 plastic particles were identified from the digestive tracts of 30 sampled fish.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Government monitoring</span>
+        <h3>Water-quality station</h3>
+        <p>BWDB's surface-water-quality database lists <strong>SW280 — Sutang Railway Bridge</strong> in Habiganj Sadar, with records available from July 2022 through August 2024 in the published station summary.</p>
+      </div>
+      <div class="card">
+        <span class="badge warn">Data gap</span>
+        <h3>Old vs current photographs</h3>
+        <p>A proper before/after gallery is still a research task. We should collect dated images from government archives, newspapers and permission-based local sources and attach the original date/location to every image.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="causes">
+    <div class="eyebrow">04 • Why</div>
+    <h2 class="section-title">Causes & consequences</h2>
+    <div class="grid">
+      <div class="card problem"><h3>Industrial effluent</h3><p>Documented as a major pressure around the industrial area and Shoiljura connection.</p></div>
+      <div class="card problem"><h3>Waste & plastics</h3><p>Microplastic research provides direct evidence of plastic contamination in river water and sampled fish.</p></div>
+      <div class="card problem"><h3>Siltation / reduced channel capacity</h3><p>Recent reporting connects the river's altered condition with inadequate dredging; government restoration procurement now includes re-excavation.</p></div>
+      <div class="card problem"><h3>Encroachment & unplanned development</h3><p>These are documented concerns in the wider Habiganj river system and should be mapped separately with primary evidence for each location.</p></div>
+    </div>
+  </section>
+
+  <section id="action">
+    <div class="eyebrow">05 • Government action</div>
+    <h2 class="section-title">What authorities are doing</h2>
+    <div class="grid">
+      <div class="card solution">
+        <span class="badge">2024 • NRCC</span>
+        <h3>Pollution-control monitoring</h3>
+        <p>NRCC published a notice for a committee meeting under High Court directions concerning ETP operation, modern pollution-control equipment and monitoring for Sutang and Shoiljura.</p>
+      </div>
+      <div class="card solution">
+        <span class="badge">2026 • BWDB / e-GP</span>
+        <h3>Re-excavation / dredging</h3>
+        <p>An official e-GP tender records a 6.5 km dredging/re-excavation package from km 6.500 to km 13.000 in Lakhai under the Sutang revitalisation and pollution-free project. The tender record shows a tentative completion date of 15 August 2027.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions">
+    <div class="eyebrow">06 • Future</div>
+    <h2 class="section-title">How the river can be protected</h2>
+    <p class="lead">These are project recommendations, not claims that every measure is already approved or implemented.</p>
+    <div class="grid">
+      <div class="card solution"><h3>1. Stop pollution at the source</h3><p>Require effective ETP operation, continuous compliance monitoring and transparent enforcement for industrial discharges.</p></div>
+      <div class="card solution"><h3>2. Restore the channel scientifically</h3><p>Use surveyed cross-sections, sediment studies and hydrological evidence to determine where re-excavation is appropriate.</p></div>
+      <div class="card solution"><h3>3. Protect connected canals</h3><p>Treat Shoiljura and other connected waterways as part of the river system rather than solving only the main channel.</p></div>
+      <div class="card solution"><h3>4. Build a public monitoring record</h3><p>Publish dated water-quality measurements, photographs, pollution incidents, government actions and project progress in one transparent timeline.</p></div>
+      <div class="card solution"><h3>5. Protect fisheries & communities</h3><p>Track fish biodiversity, livelihood effects and safe water use with local institutions and researchers.</p></div>
+      <div class="card solution"><h3>6. Preserve the history</h3><p>Digitise verified old maps, photographs, oral-history interviews and newspaper archives with source/date/location metadata.</p></div>
+    </div>
+  </section>
+
+  <section id="wiki">
+    <div class="eyebrow">07 • River Wiki</div>
+    <h2 class="section-title">Research checklist</h2>
+    <div class="grid">
+      <div class="card"><h3>Geography</h3><p>✓ Source, course, length, width, seasonality, outfall<br>□ Full GIS route<br>□ Village/union-level route</p></div>
+      <div class="card"><h3>History</h3><p>□ Old maps<br>□ Historical photographs<br>□ Navigation/boat history<br>□ Oral histories with dates and interview metadata</p></div>
+      <div class="card"><h3>Science</h3><p>✓ Microplastics evidence<br>✓ Government monitoring station<br>□ Long-term water-quality dataset<br>□ Fish/biodiversity inventory</p></div>
+      <div class="card"><h3>Restoration</h3><p>✓ 2024 NRCC action<br>✓ 2026 BWDB/e-GP package<br>□ Project completion tracking<br>□ Independent before/after assessment</p></div>
+    </div>
+  </section>
+
+  <section id="sources">
+    <div class="eyebrow">08 • Sources</div>
+    <h2 class="section-title">Authentic & traceable references</h2>
+    <p class="lead">Priority is given to government and institutional sources. Journalism and academic reporting are used where they add evidence or context.</p>
+    <div class="source-list">
+      <div class="source"><strong>Bangladesh Government — Ministry of Water Resources / Department of Bangladesh Haor & Wetlands Development</strong><small>Classification of Wetlands of Bangladesh, Volume 2, Annexure 1: Rivers of Bangladesh (2016). Sutang: BWDB Id NE-82; transboundary, non-tidal, seasonal; length 82 km; width 21–62 m, average 36 m; route and outfall data.</small><a href="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dbhwd/2024/12/e9a8457ccc494cc4b5953a8d8a6fd319.pdf" target="_blank" rel="noopener">Open government river report</a></div>
+      <div class="source"><strong>Bangladesh Water Development Board (BWDB)</strong><small>Official rivers information page and hydrology database. BWDB lists Sutang as a seasonal border river and its hydrology system lists Sutang in its river catalogue.</small><a href="https://www.bwdb.gov.bd/rivers-information" target="_blank" rel="noopener">BWDB rivers information</a></div>
+      <div class="source"><strong>BWDB Surface Water Quality Database</strong><small>Station summary includes SW280, Sutang Railway Bridge, Habiganj Sadar, with published data availability through August 2024.</small><a href="https://www.hydrology.bwdb.gov.bd/includes/surface_water_quality_print.php?dist=&river=" target="_blank" rel="noopener">BWDB water-quality station summary</a></div>
+      <div class="source"><strong>National River Conservation Commission (NRCC)</strong><small>2024 notice concerning the committee and High Court directions for pollution control, ETP operation and monitoring for Sutang and the connected Shoiljura canal.</small><a href="https://nrcc.gov.bd/site/notices/a8583f83-9f0a-41ff-b689-c9933de68427/" target="_blank" rel="noopener">NRCC notice</a></div>
+      <div class="source"><strong>Bangladesh e-GP — official government procurement</strong><small>Tender ID 1203365: 6.5 km dredging/re-excavation of Sutang River from km 6.500 to km 13.000 in Lakhai under the project “Revitalization and Pollution-free of Sutang River in Habiganj District”.</small><a href="https://www.eprocure.gov.bd/resources/common/ViewTender.jsp?TenderCancel=false&id=1203365" target="_blank" rel="noopener">Official e-GP tender record</a></div>
+      <div class="source"><strong>Habiganj Agricultural University</strong><small>Institutional research presentation/report on microplastic pollution in Sutang water and fish.</small><a href="https://hau.ac.bd/news/60" target="_blank" rel="noopener">University research report</a></div>
+      <div class="source"><strong>Peer-reviewed / academic study</strong><small>Assessment of industrialisation and physical/environmental impacts around the Alipur Industrial Area, including the Shoiljura–Sutang connection.</small><a href="https://www.researchgate.net/publication/357213407_An_Assessment_of_the_Impact_of_Industrialization_on_Physical_Environment_and_Socio-economic_Conditions_around_the_Alipur_Industrial_Area_Bangladesh" target="_blank" rel="noopener">Study record</a></div>
+      <div class="source"><strong>The Daily Star / bdnews24.com</strong><small>Used for recent reporting, local accounts and contextual history. These should not replace primary government documents where primary evidence exists.</small><a href="https://www.thedailystar.net/news/bangladesh/news/microplastics-detected-sutang-river-466-particles-litre-study-4128341" target="_blank" rel="noopener">Recent Sutang reporting</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div><strong>Sutang River Research Project</strong><p>A student-built digital archive focused on evidence, transparency and river conservation. Last research update: September 2026.</p></div>
+    <div><strong>Source policy</strong><p>Government and institutional sources first. Every major claim should have a traceable reference.</p></div>
+  </div>
+</footer>
+</body>
+</html>
