@@ -12,7 +12,7 @@ const rivers = [
     location: "Dhaka",
     status: "Under pressure",
     description: "A major river beside Dhaka. Add verified information about water quality, encroachment, navigation, and restoration.",
-    href: "buriganga-river.html"
+    href: "1buriganga-river.html"
   },
   {
     name: "Turag River",
