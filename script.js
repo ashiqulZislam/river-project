@@ -21,6 +21,13 @@ const rivers = [
     description: "A river connected to the Dhaka waterway system. Add verified historical and present-day data.",
     href: "turag-river.html"
   }
+  {
+    name: "Shonai River",
+    location: "Hobiganj"
+    status: "under pressure",
+    description:"A river connected to the hobigonj waterway system.
+    href: "shonai-river.html"
+}
 ];
 
 const grid = document.getElementById("riverGrid");
