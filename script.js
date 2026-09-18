@@ -25,9 +25,9 @@ const rivers = [
     name: "Shonai River",
     location: "Hobiganj"
     status: "under pressure",
-    description:"A river connected to the hobigonj waterway system.
+    description:"A river connected to the hobigonj waterway system."
     href: "shonai-river.html"
-  },
+  }
 ];
 
 const grid = document.getElementById("riverGrid");
