@@ -34,7 +34,7 @@ const rivers = [
    status:"Under pressure",
    description:"A river connected to the khulna waterway system.",
    href:"mayur-river.html"
-  }   
+  },  
 ];
 
 const grid = document.getElementById("riverGrid");
