@@ -27,12 +27,12 @@ const rivers = [
     status: "under pressure",
     description:"A river connected to the hobigonj waterway system.",
     href: "shonai-river.html"
-  }
+  },
   {
    name:"Mayur River",
    location:"khulna",
    status:"Under pressure",
-   description:"A river connected to the khulna waterway system ",
+   description:"A river connected to the khulna waterway system.",
    href:"mayur-river.html"
   }   
 ];
