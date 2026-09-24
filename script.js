@@ -26,7 +26,7 @@ const rivers = [
     location: "Hobiganj",
     status: "under pressure",
     description:"A river connected to the hobigonj waterway system.",
-    href: "shonai_river.html"
+    href: "sonai_river.html"
   },
   {
    name:"Mayur River",
