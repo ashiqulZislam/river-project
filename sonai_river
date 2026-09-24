@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+    content="Sonai River research project — Madhabpur, Habiganj. Geography, history, present condition, pollution, government information and river conservation.">
+
+  <title>Sonai River — From Past to Future</title>
+
+  <style>
+    :root{
+      --bg:#f4f8f7;
+      --card:#fff;
+      --ink:#12201d;
+      --muted:#5d6d68;
+      --line:#dbe7e3;
+      --river:#087f8c;
+      --deep:#07545e;
+      --accent:#d9a441;
+      --danger:#a93c3c;
+      --good:#2f7d55;
+      --shadow:0 12px 35px rgba(10,50,45,.08)
+    }
+
+    *{
+      box-sizing:border-box
+    }
+
+    html{
+      scroll-behavior:smooth
+    }
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.65
+    }
+
+    a{
+      color:var(--deep);
+      font-weight:650
+    }
+
+    .wrap{
+      max-width:1120px;
+      margin:auto;
+      padding:0 20px
+    }
+
+    header{
+      background:linear-gradient(135deg,#063f48,#087f8c 58%,#3aa5a0);
+      color:#fff;
+      padding:76px 0 62px;
+      position:relative;
+      overflow:hidden
+    }
+
+    header:after{
+      content:"";
+      position:absolute;
+      inset:auto -10% -80px -10%;
+      height:170px;
+      background:rgba(255,255,255,.09);
+      border-radius:50%
+    }
+
+    .eyebrow{
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      font-size:.78rem;
+      font-weight:800;
+      opacity:.82
+    }
+
+    h1{
+      font-size:clamp(2.4rem,7vw,5rem);
+      line-height:1.02;
+      margin:10px 0 16px
+    }
+
+    .hero p{
+      max-width:760px;
+      font-size:1.08rem;
+      opacity:.94
+    }
+
+    .hero-nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:25px
+    }
+
+    .hero-nav a{
+      color:#fff;
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,.35);
+      padding:9px 13px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08)
+    }
+
+    section{
+      padding:54px 0
+    }
+
+    .section-title{
+      font-size:2rem;
+      margin:0 0 8px
+    }
+
+    .lead{
+      color:var(--muted);
+      max-width:780px
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+      margin-top:24px
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:var(--shadow)
+    }
+
+    .stat{
+      font-size:2rem;
+      font-weight:850;
+      color:var(--river);
+      display:block
+    }
+
+    .label{
+      font-size:.9rem;
+      color:var(--muted)
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      border-radius:999px;
+      padding:4px 9px;
+      margin-bottom:8px;
+      background:#e8f4f0;
+      color:var(--good)
+    }
+
+    .badge.warn{
+      background:#fff2df;
+      color:#8a5b10
+    }
+
+    .badge.red{
+      background:#fde9e7;
+      color:var(--danger)
+    }
+
+    .timeline{
+      border-left:3px solid #a7d7d1;
+      margin:28px 0 0 12px;
+      padding-left:25px
+    }
+
+    .event{
+      position:relative;
+      margin:0 0 28px
+    }
+
+    .event:before{
+      content:"";
+      position:absolute;
+      left:-34px;
+      top:6px;
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background:var(--river);
+      border:3px solid var(--bg)
+    }
+
+    .event h3{
+      margin:0 0 4px
+    }
+
+    .event p{
+      margin:0;
+      color:var(--muted)
+    }
+
+    .compare{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px
+    }
+
+    .compare .card{
+      height:100%
+    }
+
+    .source-list{
+      display:grid;
+      gap:12px;
+      margin-top:22px
+    }
+
+    .source{
+      background:#fff;
+      border:1px solid var(--line);
+      padding:16px;
+      border-radius:14px
+    }
+
+    .source small{
+      display:block;
+      color:var(--muted);
+      margin-top:4px
+    }
+
+    .notice{
+      border-left:5px solid var(--accent);
+      background:#fffaf0;
+      padding:18px 20px;
+      border-radius:12px;
+      margin-top:22px
+    }
+
+    .problem{
+      border-top:4px solid var(--danger)
+    }
+
+    .solution{
+      border-top:4px solid var(--good)
+    }
+
+    .back-button{
+      display:inline-block;
+      margin:10px 0 35px;
+      padding:11px 18px;
+      border-radius:999px;
+      background:#087f8c;
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      box-shadow:0 6px 18px rgba(8,127,140,.2)
+    }
+
+    .back-button:hover{
+      background:#07545e
+    }
+
+    footer{
+      background:#092f34;
+      color:#d8ebe8;
+      padding:35px 0
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:30px
+    }
+
+    @media(max-width:700px){
+      .compare,
+      .footer-grid{
+        grid-template-columns:1fr
+      }
+
+      section{
+        padding:40px 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap hero">
+
+    <div class="eyebrow">
+      River Research Project • Madhabpur, Habiganj, Bangladesh
+    </div>
+
+    <h1>Sonai River</h1>
+
+    <p>
+      <strong>From Past to Future</strong> —
+      a source-based digital record of the Sonai River,
+      its geography, history, present condition, environmental pressures
+      and the need for long-term conservation.
+    </p>
+
+    <div class="hero-nav">
+      <a href="#profile">River profile</a>
+      <a href="#history">History</a>
+      <a href="#present">Present</a>
+      <a href="#causes">Problems</a>
+      <a href="#action">Government action</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#sources">Sources</a>
+    </div>
+
+  </div>
+</header>
+
+
+<main class="wrap">
+
+  <!-- PROFILE -->
+  <section id="profile">
+
+    <div class="eyebrow">
+      01 • River information
+    </div>
+
+    <h2 class="section-title">
+      A verified river profile
+    </h2>
+
+    <p class="lead">
+      The Bangladesh Water Development Board identifies Sonai as a
+      transboundary river flowing from India into Bangladesh.
+      In Bangladesh, the river passes through parts of Brahmanbaria
+      and Habiganj, including Madhabpur Upazila.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <span class="stat">India</span>
+        <span class="label">
+          Recorded source / origin country
+        </span>
+      </div>
+
+      <div class="card">
+        <span class="stat">Perennial</span>
+        <span class="label">
+          BWDB flow classification
+        </span>
+      </div>
+
+      <div class="card">
+        <span class="stat">Madhabpur</span>
+        <span class="label">
+          Habiganj upazila crossed by Sonai
+        </span>
+      </div>
+
+      <div class="card">
+        <span class="stat">Titas</span>
+        <span class="label">
+          Recorded outfall in BWDB river information
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="grid">
+
+      <div class="card">
+
+        <span class="badge">
+          Government record
+        </span>
+
+        <h3>
+          Origin & course
+        </h3>
+
+        <p>
+          BWDB's river information identifies the source area of
+          Sonai as <strong>India</strong>. The river is recorded as
+          flowing through <strong>Bijoynagar and Nasirnagar in
+          Brahmanbaria</strong> and <strong>Madhabpur in Habiganj</strong>.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge">
+          Government record
+        </span>
+
+        <h3>
+          River system
+        </h3>
+
+        <p>
+          The BWDB river database records Sonai as a
+          <strong>border river</strong> and classifies it as
+          <strong>perennial</strong>. The same government record
+          lists the <strong>Titas River</strong> as its outfall.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge">
+          Monitoring
+        </span>
+
+        <h3>
+          Montala station
+        </h3>
+
+        <p>
+          BWDB's surface-water-quality database lists
+          <strong>SW264A — Montala</strong> on the Sonai River
+          in Madhabpur Upazila, Habiganj.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge warn">
+          Research gap
+        </span>
+
+        <h3>
+          Detailed river route
+        </h3>
+
+        <p>
+          A complete village-by-village GIS route, historical
+          channel maps and verified measurements should be added
+          only after the underlying maps and datasets are identified.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HISTORY -->
+  <section id="history">
+
+    <div class="eyebrow">
+      02 • Then
+    </div>
+
+    <h2 class="section-title">
+      History & people
+    </h2>
+
+    <p class="lead">
+      The Sonai River is part of the water system connecting
+      northeastern Bangladesh with the river network of the
+      neighbouring Indian region. The project should preserve
+      both its environmental importance and its local history.
+    </p>
+
+
+    <div class="timeline">
+
+      <div class="event">
+
+        <h3>
+          A transboundary river
+        </h3>
+
+        <p>
+          Government river information identifies Sonai as a
+          border river with its source area in India and its
+          Bangladeshi course extending through Brahmanbaria and Habiganj.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          Connection with Madhabpur
+        </h3>
+
+        <p>
+          Madhabpur is one of the Bangladeshi upazilas specifically
+          listed by BWDB in connection with the Sonai River.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          Water and local life
+        </h3>
+
+        <p>
+          Rivers in the Madhabpur region support a wider landscape
+          of agriculture, fisheries, settlements and wetland
+          connections. A detailed historical account should be
+          supported with dated local records and interviews.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          Recent environmental pressure
+        </h3>
+
+        <p>
+          Reporting published in March 2026 described waste,
+          pollution, encroachment and narrowing of parts of the
+          Sonai River in Madhabpur.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="notice">
+
+      <strong>Archive rule:</strong>
+      historical photographs, newspaper scans, maps and oral-history
+      material should be added only with a traceable source, date and
+      location. Unverified historical claims should remain clearly
+      labelled as research leads.
+
+    </div>
+
+  </section>
+
+
+  <!-- PRESENT -->
+  <section id="present">
+
+    <div class="eyebrow">
+      03 • Now
+    </div>
+
+    <h2 class="section-title">
+      Present condition
+    </h2>
+
+    <p class="lead">
+      Current evidence combines official BWDB information,
+      water-quality monitoring records and recent local reporting.
+      The project separates documented conditions from areas that
+      still require field research.
+    </p>
+
+
+    <div class="compare">
+
+      <div class="card problem">
+
+        <span class="badge red">
+          Recent reporting
+        </span>
+
+        <h3>
+          Waste & pollution
+        </h3>
+
+        <p>
+          A March 2026 report described accumulated garbage and
+          waste along parts of the Sonai River in Madhabpur and
+          reported pollution concerns.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <span class="badge red">
+          Recent reporting
+        </span>
+
+        <h3>
+          Encroachment & narrowing
+        </h3>
+
+        <p>
+          The same 2026 report described illegal structures and
+          encroachment as contributing to the narrowing of parts
+          of the river.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge">
+          Government monitoring
+        </span>
+
+        <h3>
+          Water-quality station
+        </h3>
+
+        <p>
+          BWDB's surface-water-quality database lists
+          <strong>SW264A — Montala</strong>, Sonai River,
+          Madhabpur, Habiganj. Published records are available
+          from <strong>7 July 2022 to 5 August 2024</strong>.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge warn">
+          Data gap
+        </span>
+
+        <h3>
+          Before & after photographs
+        </h3>
+
+        <p>
+          A reliable visual comparison still requires dated
+          photographs from known locations. The project should
+          record the date, location and original source of every
+          photograph.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAUSES -->
+  <section id="causes">
+
+    <div class="eyebrow">
+      04 • Why
+    </div>
+
+    <h2 class="section-title">
+      Causes & consequences
+    </h2>
+
+
+    <div class="grid">
+
+      <div class="card problem">
+
+        <h3>
+          Waste dumping
+        </h3>
+
+        <p>
+          Recent reporting from Madhabpur describes garbage and
+          waste being deposited along parts of the river.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          Pollution
+        </h3>
+
+        <p>
+          Pollution has been identified as a current concern
+          in recent local reporting. The project should add
+          laboratory water-quality results as they become available.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          Encroachment
+        </h3>
+
+        <p>
+          Recent reporting has described illegal structures and
+          encroachment along parts of the Sonai River in Madhabpur.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          Reduced river space
+        </h3>
+
+        <p>
+          Waste, structures and encroachment can reduce available
+          channel space. Exact locations and changes should be
+          mapped using field photographs, surveys or GIS data.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GOVERNMENT ACTION -->
+  <section id="action">
+
+    <div class="eyebrow">
+      05 • Government information
+    </div>
+
+    <h2 class="section-title">
+      What authorities are doing
+    </h2>
+
+    <div class="grid">
+
+      <div class="card solution">
+
+        <span class="badge">
+          BWDB
+        </span>
+
+        <h3>
+          River monitoring
+        </h3>
+
+        <p>
+          BWDB operates a surface-water-quality monitoring network
+          that includes the <strong>Montala station on Sonai River</strong>
+          in Madhabpur.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <span class="badge">
+          Government river database
+        </span>
+
+        <h3>
+          Official river identification
+        </h3>
+
+        <p>
+          Sonai is included in BWDB's official river information
+          as a transboundary, perennial river in the northeastern
+          region of Bangladesh.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge warn">
+          Research required
+        </span>
+
+        <h3>
+          Restoration projects
+        </h3>
+
+        <p>
+          Before listing a dredging, bank-protection or
+          re-excavation project as an active Sonai restoration
+          project, the official project document should be located
+          and verified.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOLUTIONS -->
+  <section id="solutions">
+
+    <div class="eyebrow">
+      06 • Future
+    </div>
+
+    <h2 class="section-title">
+      How the river can be protected
+    </h2>
+
+    <p class="lead">
+      These are project recommendations. They are not claims that
+      every measure is already approved or implemented.
+    </p>
+
+
+    <div class="grid">
+
+      <div class="card solution">
+
+        <h3>
+          1. Stop waste dumping
+        </h3>
+
+        <p>
+          Establish waste-collection points away from the river
+          and strengthen enforcement against dumping directly
+          into the water or along the bank.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          2. Protect the river boundary
+        </h3>
+
+        <p>
+          Map vulnerable sections and document encroachment using
+          photographs, GPS/GIS data and official land records.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          3. Monitor water quality
+        </h3>
+
+        <p>
+          Publish regular water-quality measurements and make the
+          results accessible to local communities and researchers.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          4. Restore scientifically
+        </h3>
+
+        <p>
+          Any dredging or re-excavation should be based on
+          hydrological surveys, sediment studies and verified
+          channel requirements.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          5. Protect fisheries
+        </h3>
+
+        <p>
+          Record fish species, fishing activity and biodiversity
+          changes so restoration can consider both the river
+          ecosystem and local livelihoods.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          6. Build a public river record
+        </h3>
+
+        <p>
+          Maintain a transparent timeline containing photographs,
+          water-quality data, pollution incidents, government
+          actions and restoration progress.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RIVER WIKI -->
+  <section id="wiki">
+
+    <div class="eyebrow">
+      07 • River Wiki
+    </div>
+
+    <h2 class="section-title">
+      Research checklist
+    </h2>
+
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>
+          Geography
+        </h3>
+
+        <p>
+          ✓ Source country<br>
+          ✓ Districts / upazilas<br>
+          ✓ Outfall information<br>
+          ✓ Madhabpur monitoring station<br>
+          □ Full GIS route<br>
+          □ Village / union-level route<br>
+          □ Verified length and width dataset
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          History
+        </h3>
+
+        <p>
+          □ Old maps<br>
+          □ Historical photographs<br>
+          □ Navigation history<br>
+          □ Fishing history<br>
+          □ Oral histories with dates and locations
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Science
+        </h3>
+
+        <p>
+          ✓ BWDB monitoring station<br>
+          □ Long-term water-quality dataset<br>
+          □ Fish/biodiversity inventory<br>
+          □ Sediment study<br>
+          □ Seasonal water-level record
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Restoration
+        </h3>
+
+        <p>
+          ✓ Current environmental concerns documented<br>
+          □ Official restoration project identification<br>
+          □ Encroachment map<br>
+          □ Waste-source map<br>
+          □ Before/after assessment
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOURCES -->
+  <section id="sources">
+
+    <div class="eyebrow">
+      08 • Sources
+    </div>
+
+    <h2 class="section-title">
+      Authentic & traceable references
+    </h2>
+
+    <p class="lead">
+      Priority is given to government and institutional sources.
+      Journalism is used for recent local reporting and context.
+    </p>
+
+
+    <div class="source-list">
+
+      <div class="source">
+
+        <strong>
+          Bangladesh Water Development Board (BWDB)
+        </strong>
+
+        <small>
+          Official river information identifies Sonai as a
+          transboundary river, with source in India, outfall to
+          the Titas River, and flow through Bijoynagar, Nasirnagar
+          and Madhabpur.
+        </small>
+
+        <a
+          href="https://www.bwdb.gov.bd/archive/pdf/14898.pdf"
+          target="_blank"
+          rel="noopener">
+          Open BWDB river information
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          BWDB — Rivers Information
+        </strong>
+
+        <small>
+          BWDB's current river information lists Sonai in the
+          northeastern zone as a border river with perennial flow.
+        </small>
+
+        <a
+          href="https://en.bwdb.gov.bd/rivers-information"
+          target="_blank"
+          rel="noopener">
+          Open BWDB rivers information
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          BWDB Surface Water Quality Database
+        </strong>
+
+        <small>
+          Station SW264A, Montala, Sonai River, Madhabpur,
+          Habiganj. Published station records are available
+          from July 2022 through August 2024.
+        </small>
+
+        <a
+          href="https://www.hydrology.bwdb.gov.bd/includes/surface_water_quality_print.php?dist=&river="
+          target="_blank"
+          rel="noopener">
+          Open BWDB water-quality station summary
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          Samakal — March 18, 2026
+        </strong>
+
+        <small>
+          Recent local reporting describing waste, pollution,
+          encroachment and narrowing of the Sonai River in
+          Madhabpur.
+        </small>
+
+        <a
+          href="https://samakal.com/whole-country/article/343392/%E0%A6%A6%E0%A6%96%E0%A6%B2-%E0%A6%A6%E0%A7%82%E0%A6%B7%E0%A6%A3%E0%A7%87-%E0%A6%AE%E0%A7%81%E0%A6%AE%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%B7%E0%A7%81-%E0%A6%AE%E0%A6%BE%E0%A6%A7%E0%A6%AC%E0%A6%AA%E0%A7%81%E0%A6%B0%E0%A7%87%E0%A6%B0-%E0%A6%B8%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%87-%E0%A6%A8%E0%A6%A6%E0%Aী"
+          target="_blank"
+          rel="noopener">
+          Open recent report
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          BWDB — Official Project Information
+        </strong>
+
+        <small>
+          Official BWDB project database. This should be used
+          to verify any future Sonai-specific bank protection,
+          dredging or restoration project before listing it as
+          active on this page.
+        </small>
+
+        <a
+          href="https://en.bwdb.gov.bd/ongoing-project"
+          target="_blank"
+          rel="noopener">
+          Open BWDB project database
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BACK BUTTON -->
+  <a class="back-button" href="index.html#rivers">
+    ← Back to Rivers
+  </a>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-grid">
+
+    <div>
+
+      <strong>
+        Sonai River Research Project
+      </strong>
+
+      <p>
+        Ashiqul Islam self-built digital archive focused on
+        evidence, transparency and river conservation.
+        Last research update: September 2026.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        Source policy
+      </strong>
+
+      <p>
+        Government and institutional sources first.
+        Every major claim should have a traceable reference.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
