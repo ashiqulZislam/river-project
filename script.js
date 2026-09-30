@@ -35,7 +35,13 @@ const rivers = [
    description:"A river connected to the khulna waterway system.",
    href:"mayur-river.html"
   },  
-  
+  {
+    name:"khowai River",
+    location:"Hobigonj",
+    status:"Under pressure",
+    description:"A river connected to the Hobigonj city main water way system.",
+    href:"khowai_river.html"
+  },
 ];
 
 const grid = document.getElementById("riverGrid");
