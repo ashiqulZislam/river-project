@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="Khowai River research project — geography, history, present condition, pollution, erosion, government action and restoration.">
+
+  <title>Khowai River — From Past to Future</title>
+
+  <style>
+    :root{
+      --bg:#f4f8f7;
+      --card:#fff;
+      --ink:#12201d;
+      --muted:#5d6d68;
+      --line:#dbe7e3;
+      --river:#087f8c;
+      --deep:#07545e;
+      --accent:#d9a441;
+      --danger:#a93c3c;
+      --good:#2f7d55;
+      --shadow:0 12px 35px rgba(10,50,45,.08);
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.65;
+    }
+
+    a{
+      color:var(--deep);
+      font-weight:650;
+    }
+
+    .wrap{
+      max-width:1120px;
+      margin:auto;
+      padding:0 20px;
+    }
+
+    /* HERO */
+
+    header{
+      background:linear-gradient(
+        135deg,
+        #063f48,
+        #087f8c 58%,
+        #3aa5a0
+      );
+      color:#fff;
+      padding:76px 0 62px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    header:after{
+      content:"";
+      position:absolute;
+      inset:auto -10% -80px -10%;
+      height:170px;
+      background:rgba(255,255,255,.09);
+      border-radius:50%;
+    }
+
+    .eyebrow{
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      font-size:.78rem;
+      font-weight:800;
+      opacity:.82;
+    }
+
+    h1{
+      font-size:clamp(2.4rem,7vw,5rem);
+      line-height:1.02;
+      margin:10px 0 16px;
+    }
+
+    .hero p{
+      max-width:780px;
+      font-size:1.08rem;
+      opacity:.94;
+    }
+
+    .hero-nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .hero-nav a{
+      color:#fff;
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,.35);
+      padding:9px 13px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:54px 0;
+    }
+
+    .section-title{
+      font-size:2rem;
+      margin:0 0 8px;
+    }
+
+    .lead{
+      color:var(--muted);
+      max-width:800px;
+    }
+
+    /* CARDS */
+
+    .grid{
+      display:grid;
+      grid-template-columns:
+        repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .stat{
+      font-size:2rem;
+      font-weight:850;
+      color:var(--river);
+      display:block;
+    }
+
+    .label{
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    /* BADGES */
+
+    .badge{
+      display:inline-block;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      border-radius:999px;
+      padding:4px 9px;
+      margin-bottom:8px;
+      background:#e8f4f0;
+      color:var(--good);
+    }
+
+    .badge.warn{
+      background:#fff2df;
+      color:#8a5b10;
+    }
+
+    .badge.red{
+      background:#fde9e7;
+      color:var(--danger);
+    }
+
+    /* TIMELINE */
+
+    .timeline{
+      border-left:3px solid #a7d7d1;
+      margin:28px 0 0 12px;
+      padding-left:25px;
+    }
+
+    .event{
+      position:relative;
+      margin:0 0 28px;
+    }
+
+    .event:before{
+      content:"";
+      position:absolute;
+      left:-34px;
+      top:6px;
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background:var(--river);
+      border:3px solid var(--bg);
+    }
+
+    .event h3{
+      margin:0 0 4px;
+    }
+
+    .event p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    /* SOURCE CARDS */
+
+    .source-list{
+      display:grid;
+      gap:12px;
+      margin-top:22px;
+    }
+
+    .source{
+      background:#fff;
+      border:1px solid var(--line);
+      padding:16px;
+      border-radius:14px;
+    }
+
+    .source small{
+      display:block;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    /* NOTICE */
+
+    .notice{
+      border-left:5px solid var(--accent);
+      background:#fffaf0;
+      padding:18px 20px;
+      border-radius:12px;
+      margin-top:22px;
+    }
+
+    /* PROBLEM / SOLUTION */
+
+    .problem{
+      border-top:4px solid var(--danger);
+    }
+
+    .solution{
+      border-top:4px solid var(--good);
+    }
+
+    /* COMPARISON */
+
+    .compare{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .compare .card{
+      height:100%;
+    }
+
+    /* BACK BUTTON */
+
+    .back-button{
+      display:inline-block;
+      margin:20px 0 55px;
+      padding:11px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      background:var(--deep);
+      color:white;
+      font-weight:750;
+    }
+
+    .back-button:hover{
+      opacity:.9;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#092f34;
+      color:#d8ebe8;
+      padding:35px 0;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:30px;
+    }
+
+    footer p{
+      color:#b9d1cd;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:700px){
+      .compare,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      section{
+        padding:40px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap hero">
+
+    <div class="eyebrow">
+      River Research Project • Habiganj, Bangladesh
+    </div>
+
+    <h1>Khowai River</h1>
+
+    <p>
+      <strong>From Past to Future</strong> —
+      a source-based digital record of the Khowai River,
+      its geography, history, present condition,
+      pollution, erosion, flooding, government action
+      and possible restoration.
+    </p>
+
+    <div class="hero-nav">
+      <a href="#profile">River profile</a>
+      <a href="#history">History</a>
+      <a href="#present">Present</a>
+      <a href="#causes">Problems</a>
+      <a href="#action">Government action</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#sources">Sources</a>
+    </div>
+
+  </div>
+</header>
+
+
+<main class="wrap">
+
+  <!-- PROFILE -->
+
+  <section id="profile">
+
+    <div class="eyebrow">
+      01 • River information
+    </div>
+
+    <h2 class="section-title">
+      A verified river profile
+    </h2>
+
+    <p class="lead">
+      Khowai is a transboundary river associated with India's
+      Tripura state and Bangladesh's Habiganj region.
+      Bangladesh Water Development Board records Khowai as a
+      perennial border river and provides hydrological monitoring
+      stations on the river.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <span class="stat">Perennial</span>
+        <span class="label">
+          BWDB classification: perennial flow
+        </span>
+      </div>
+
+      <div class="card">
+        <span class="stat">Border</span>
+        <span class="label">
+          BWDB identifies Khowai as a border river
+        </span>
+      </div>
+
+      <div class="card">
+        <span class="stat">NE Zone</span>
+        <span class="label">
+          Bangladesh Water Development Board zone
+        </span>
+      </div>
+
+      <div class="card">
+        <span class="stat">2 Stations</span>
+        <span class="label">
+          BWDB water-level records at Habiganj and Shaistaganj
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="grid">
+
+      <div class="card">
+
+        <span class="badge">
+          Government information
+        </span>
+
+        <h3>
+          Origin & course
+        </h3>
+
+        <p>
+          The Khowai originates in the hill region of
+          Tripura, India, before entering Bangladesh through
+          Habiganj District. The Habiganj Sadar government
+          information page describes the river as flowing through
+          Chunarughat, Habiganj Sadar and Baniachong areas.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge">
+          Local government record
+        </span>
+
+        <h3>
+          Importance to Habiganj
+        </h3>
+
+        <p>
+          The Habiganj Sadar government website describes the
+          Khowai as historically important for communication and
+          currently important for agriculture, fisheries and
+          movement of goods in parts of the area.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="badge warn">
+          Research note
+        </span>
+
+        <h3>
+          Historical route
+        </h3>
+
+        <p>
+          Historical maps should be added to this project only
+          after the original map or archive source is verified.
+          This page does not treat an unverified historical route
+          as established fact.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HISTORY -->
+
+  <section id="history">
+
+    <div class="eyebrow">
+      02 • Then
+    </div>
+
+    <h2 class="section-title">
+      History & people
+    </h2>
+
+    <p class="lead">
+      The Khowai is more than a water channel. It has been
+      connected with transportation, fishing, agriculture and
+      everyday life in Habiganj.
+    </p>
+
+
+    <div class="timeline">
+
+      <div class="event">
+
+        <h3>
+          A major communication route
+        </h3>
+
+        <p>
+          Local government information describes the Khowai as
+          historically serving as a major communication route
+          for the area. Limited transportation of goods by river
+          continues in some places.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          Agriculture & fisheries
+        </h3>
+
+        <p>
+          The river remains connected with agricultural water
+          use and fisheries in the Habiganj region.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          Urban pressure
+        </h3>
+
+        <p>
+          As Habiganj town developed, sections of the river and
+          its banks came under increasing pressure from waste
+          dumping and encroachment.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          Growing conservation concern
+        </h3>
+
+        <p>
+          River-conservation groups and local reporting have
+          increasingly documented concerns about the condition
+          of the Khowai and Old Khowai.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRESENT CONDITION -->
+
+  <section id="present">
+
+    <div class="eyebrow">
+      03 • Now
+    </div>
+
+    <h2 class="section-title">
+      Present condition
+    </h2>
+
+    <p class="lead">
+      Recent reporting shows several different pressures on the
+      Khowai system. These include waste dumping, encroachment,
+      sand extraction, erosion and flood-related damage.
+    </p>
+
+
+    <div class="grid">
+
+      <div class="card problem">
+
+        <span class="badge red">
+          Pollution
+        </span>
+
+        <h3>
+          Waste dumping
+        </h3>
+
+        <p>
+          Reporting from Habiganj has documented household,
+          commercial and other waste being dumped into or beside
+          sections of the river.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <span class="badge red">
+          Encroachment
+        </span>
+
+        <h3>
+          Pressure on river land
+        </h3>
+
+        <p>
+          Encroachment along sections of the Khowai and Old
+          Khowai has been identified as a major conservation
+          concern.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <span class="badge red">
+          Erosion
+        </span>
+
+        <h3>
+          Unstable riverbanks
+        </h3>
+
+        <p>
+          Riverbank erosion and damage to protective
+          embankments have created serious risks for nearby
+          agricultural land and settlements.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <span class="badge red">
+          Sand extraction
+        </span>
+
+        <h3>
+          Pressure from extraction
+        </h3>
+
+        <p>
+          In 2026, local officials and residents linked alleged
+          illegal sand extraction with weakening of an
+          embankment section before a breach.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="notice">
+
+      <strong>Important distinction:</strong>
+
+      The Khowai is not literally a completely "dead" river.
+      BWDB currently classifies it as a perennial river.
+      The phrase "river under severe pressure" is more accurate
+      for this project because the evidence shows substantial
+      environmental and physical problems while the river
+      continues to flow.
+
+    </div>
+
+  </section>
+
+
+  <!-- CAUSES -->
+
+  <section id="causes">
+
+    <div class="eyebrow">
+      04 • Why
+    </div>
+
+    <h2 class="section-title">
+      Causes & consequences
+    </h2>
+
+
+    <div class="grid">
+
+      <div class="card problem">
+
+        <h3>
+          1. Waste dumping
+        </h3>
+
+        <p>
+          Household and commercial waste has been reported along
+          parts of the river and its banks, affecting water,
+          drainage and the appearance of the river.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          2. Encroachment
+        </h3>
+
+        <p>
+          Encroachment reduces the effective river space and can
+          interfere with natural drainage and flood management.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          3. Sand extraction
+        </h3>
+
+        <p>
+          Recent reporting has raised concerns about sand
+          extraction and its relationship with erosion and
+          embankment stability.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          4. Flood & flash-flood pressure
+        </h3>
+
+        <p>
+          Heavy rainfall and upstream runoff can rapidly increase
+          water levels, placing strong pressure on embankments
+          and nearby communities.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          5. Damaged embankments
+        </h3>
+
+        <p>
+          Repeated breaches can allow river water to enter
+          agricultural land, settlements and roads.
+        </p>
+
+      </div>
+
+
+      <div class="card problem">
+
+        <h3>
+          6. Loss of river depth and navigation
+        </h3>
+
+        <p>
+          Local reporting has described reduced depth and
+          declining navigability in parts of the river system.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 2026 EVENTS -->
+
+  <section id="events">
+
+    <div class="eyebrow">
+      05 • 2026
+    </div>
+
+    <h2 class="section-title">
+      Recent Khowai events
+    </h2>
+
+    <div class="timeline">
+
+      <div class="event">
+
+        <h3>
+          July 2026 — embankment breach
+        </h3>
+
+        <p>
+          Heavy rain and upstream runoff contributed to a major
+          Khowai embankment breach in Habiganj. Reporting indicated
+          that multiple villages were affected by flooding.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          July 2026 — sand extraction investigation
+        </h3>
+
+        <p>
+          Authorities seized dredgers following allegations that
+          illegal sand extraction had contributed to weakening of
+          the embankment.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          August 2026 — another breach
+        </h3>
+
+        <p>
+          A section of the Khowai protection embankment breached
+          again after increased river flow and erosion.
+        </p>
+
+      </div>
+
+
+      <div class="event">
+
+        <h3>
+          August 2026 — long-term measures discussed
+        </h3>
+
+        <p>
+          The State Minister for Water Resources said long-term
+          options such as barrages or switchgates were being
+          considered, while immediate protection included
+          geo-bags.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GOVERNMENT ACTION -->
+
+  <section id="action">
+
+    <div class="eyebrow">
+      06 • Government action
+    </div>
+
+    <h2 class="section-title">
+      What authorities are doing
+    </h2>
+
+
+    <div class="grid">
+
+      <div class="card solution">
+
+        <span class="badge">
+          BWDB
+        </span>
+
+        <h3>
+          River monitoring
+        </h3>
+
+        <p>
+          BWDB operates water-level monitoring stations on the
+          Khowai, including stations at Habiganj and Shaistaganj.
+          The published hydrological dataset provides historical
+          water-level records.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <span class="badge">
+          2026
+        </span>
+
+        <h3>
+          Emergency embankment repair
+        </h3>
+
+        <p>
+          Following the 2026 breaches, authorities initiated
+          repair and protection work on damaged sections of the
+          embankment.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <span class="badge">
+          2026
+        </span>
+
+        <h3>
+          Geo-bag protection
+        </h3>
+
+        <p>
+          Officials announced geo-bags as an immediate measure
+          for vulnerable sections of the riverbank and
+          embankment.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <span class="badge">
+          Long-term planning
+        </span>
+
+        <h3>
+          Sustainable flood control
+        </h3>
+
+        <p>
+          Government officials have discussed feasibility studies
+          and longer-term engineering options to reduce erosion
+          and flood risk.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOLUTIONS -->
+
+  <section id="solutions">
+
+    <div class="eyebrow">
+      07 • Future
+    </div>
+
+    <h2 class="section-title">
+      How the Khowai can be protected
+    </h2>
+
+    <p class="lead">
+      These are project recommendations for research and public
+      discussion. They are not claims that every measure has
+      already been approved or implemented.
+    </p>
+
+
+    <div class="grid">
+
+      <div class="card solution">
+
+        <h3>
+          1. Stop waste entering the river
+        </h3>
+
+        <p>
+          Establish reliable municipal waste collection and
+          enforce restrictions against dumping waste into the
+          river and along its banks.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          2. Protect the river boundary
+        </h3>
+
+        <p>
+          Clearly identify the legal river boundary and protect
+          it from new encroachment.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          3. Control illegal sand extraction
+        </h3>
+
+        <p>
+          Monitor extraction locations and enforce existing
+          environmental and land-management rules.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          4. Restore damaged banks
+        </h3>
+
+        <p>
+          Use engineering studies, riverbank surveys and
+          appropriate erosion-control methods rather than
+          relying on temporary repairs alone.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          5. Protect the Old Khowai
+        </h3>
+
+        <p>
+          Map the remaining Old Khowai channel, prevent further
+          filling and encroachment, and investigate opportunities
+          for ecological restoration.
+        </p>
+
+      </div>
+
+
+      <div class="card solution">
+
+        <h3>
+          6. Build a public river database
+        </h3>
+
+        <p>
+          Record photographs, water levels, pollution reports,
+          maps, government projects and restoration progress with
+          dates and source information.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESEARCH CHECKLIST -->
+
+  <section id="wiki">
+
+    <div class="eyebrow">
+      08 • River Wiki
+    </div>
+
+    <h2 class="section-title">
+      Research checklist
+    </h2>
+
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>
+          Geography
+        </h3>
+
+        <p>
+          ✓ Transboundary river<br>
+          ✓ Tripura–Habiganj connection<br>
+          ✓ BWDB monitoring stations<br>
+          □ Full GIS route<br>
+          □ Verified river-length dataset
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          History
+        </h3>
+
+        <p>
+          ✓ Historical communication role<br>
+          ✓ Agriculture and fisheries connection<br>
+          □ Old maps<br>
+          □ Historical photographs<br>
+          □ Oral-history interviews
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Environment
+        </h3>
+
+        <p>
+          ✓ Waste dumping evidence<br>
+          ✓ Encroachment reports<br>
+          ✓ Sand-extraction concerns<br>
+          □ Long-term water-quality dataset<br>
+          □ Biodiversity inventory
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Restoration
+        </h3>
+
+        <p>
+          ✓ Embankment repair<br>
+          ✓ Geo-bag protection<br>
+          ✓ Long-term planning discussion<br>
+          □ Project completion tracking<br>
+          □ Before/after assessment
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOURCES -->
+
+  <section id="sources">
+
+    <div class="eyebrow">
+      09 • Sources
+    </div>
+
+    <h2 class="section-title">
+      Authentic & traceable references
+    </h2>
+
+    <p class="lead">
+      Priority is given to government and institutional sources.
+      Journalism and civil-society sources are used for additional
+      reporting and local context.
+    </p>
+
+
+    <div class="source-list">
+
+
+      <div class="source">
+
+        <strong>
+          Bangladesh Water Development Board — Rivers Information
+        </strong>
+
+        <small>
+          BWDB lists Khowai as a perennial border river in the
+          Northeast zone.
+        </small>
+
+        <a
+          href="https://en.bwdb.gov.bd/rivers-information"
+          target="_blank"
+          rel="noopener">
+          Open BWDB Rivers Information
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          BWDB Hydroinformatics & Flood Forecasting
+        </strong>
+
+        <small>
+          Hydrological information identifies Khowai as river
+          code 61 and provides river information and monitoring
+          resources.
+        </small>
+
+        <a
+          href="https://hydrology.bwdb.gov.bd/"
+          target="_blank"
+          rel="noopener">
+          Open BWDB Hydrology
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          BWDB Water-Level Data
+        </strong>
+
+        <small>
+          Published data includes Khowai stations at Habiganj
+          and Shaistaganj, with long-term water-level records.
+        </small>
+
+        <a
+          href="https://www.hydrology.bwdb.gov.bd/includes/water_level_data_available_print.php?dist=&river="
+          target="_blank"
+          rel="noopener">
+          Open Water-Level Data
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          Habiganj Sadar Upazila Government
+        </strong>
+
+        <small>
+          Government information on Khowai's origin, course,
+          historical communication role, agriculture and
+          fisheries.
+        </small>
+
+        <a
+          href="https://habiganjsadar.habiganj.gov.bd/en/site/page/b7js-%E0%A6%A8%E0%A6%A6%E0%A6%A8%E0%A6%A6%E0%A7%80"
+          target="_blank"
+          rel="noopener">
+          Open Government River Information
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          The Daily Star — Khowai River
+        </strong>
+
+        <small>
+          Reporting on waste dumping, encroachment and the
+          deteriorating condition of the Khowai around Habiganj.
+        </small>
+
+        <a
+          href="https://www.thedailystar.net/supplements/world-rivers-day-2025/news/khowai-gasps-life-3996441"
+          target="_blank"
+          rel="noopener">
+          Read the report
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          The Daily Star — 2026 Embankment Breach
+        </strong>
+
+        <small>
+          Reporting on the July 2026 Khowai embankment breach,
+          alleged illegal sand extraction and resulting flooding.
+        </small>
+
+        <a
+          href="https://www.thedailystar.net/news/bangladesh/news/how-illegal-sand-extraction-led-khowai-embankment-breach-4225261"
+          target="_blank"
+          rel="noopener">
+          Read the report
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          BSS — August 2026 Inspection
+        </strong>
+
+        <small>
+          Government news reporting on inspection of the breached
+          Khowai embankment and proposed immediate and long-term
+          measures.
+        </small>
+
+        <a
+          href="https://www.bssnews.net/others/417990"
+          target="_blank"
+          rel="noopener">
+          Read BSS report
+        </a>
+
+      </div>
+
+
+      <div class="source">
+
+        <strong>
+          Waterkeepers Bangladesh — Old Khowai
+        </strong>
+
+        <small>
+          Civil-society documentation concerning encroachment,
+          pollution, landfilling and conservation of the Old
+          Khowai River.
+        </small>
+
+        <a
+          href="https://waterkeepersbangladesh.org/memorandum-submitted-to-district-commissioner-on-the-conservation-of-old-khowai-river/"
+          target="_blank"
+          rel="noopener">
+          Read the documentation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BACK -->
+
+  <a
+    class="back-button"
+    href="index.html#rivers">
+    ← Back to Rivers
+  </a>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-grid">
+
+    <div>
+
+      <strong>
+        Khowai River Research Project
+      </strong>
+
+      <p>
+        Ashiqul Islam self-built digital archive focused on
+        evidence, transparency and river conservation.
+        Research update: September 2026.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        Source policy
+      </strong>
+
+      <p>
+        Government and institutional sources first.
+        Major claims should have a traceable reference.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
